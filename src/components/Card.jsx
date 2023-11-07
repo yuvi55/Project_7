@@ -52,11 +52,11 @@ function Card() {
     <div>
       <form
         onSubmit={insert_to_database}
-        className="mt-4 p-4 bg-white rounded shadow-md"
+        className="mt-4 p-4 rounded shadow-md"
       >
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="name"
           >
             Name
@@ -66,13 +66,13 @@ function Card() {
             type="text"
             placeholder="Enter CrewMate's name"
             onChange={handleNameChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
           ></input>
         </div>
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="speed"
           >
             Speed
@@ -88,7 +88,7 @@ function Card() {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="colors"
           >
             Select a color
@@ -101,7 +101,7 @@ function Card() {
                 name={color}
                 value={color}
                 onChange={handleColorChange}
-                className="mr-2"
+                className="mr-2 text-gray-700"
               />
               <label htmlFor={color} className="mr-4">
                 {color}
@@ -112,7 +112,7 @@ function Card() {
 
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-blue-500 hover:bg-blue-700 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Create a CrewMate
         </button>

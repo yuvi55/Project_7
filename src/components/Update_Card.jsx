@@ -96,13 +96,10 @@ function Update_Card() {
         Name:{dbdata[0]?.Name}, Speed:{dbdata[0]?.Speed}, Color:
         {dbdata[0]?.Color}
       </h3>
-      <form
-        onSubmit={update_database}
-        className="mt-4 p-4 bg-white rounded shadow-md"
-      >
+      <form onSubmit={update_database} className="mt-4 p-4 rounded shadow-md">
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="name"
           >
             Name
@@ -112,13 +109,13 @@ function Update_Card() {
             type="text"
             placeholder="Enter CrewMate's name"
             onChange={handleNameChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
           ></input>
         </div>
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="speed"
           >
             Speed
@@ -128,13 +125,13 @@ function Update_Card() {
             type="number"
             placeholder="Enter speed in mph"
             onChange={handleSpeedChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
           ></input>
         </div>
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="colors"
           >
             Select a color
