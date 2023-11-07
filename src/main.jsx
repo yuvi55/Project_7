@@ -9,14 +9,18 @@ import Error from "./components/Error.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import Update_Card from "./components/Update_Card.jsx";
+import Individual_info from "./components/Individual_info.jsx";
+import SideBar from "./components/SideBar.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
+    <SideBar />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/create" element={<Crew_mate />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/gallery/:id" element={<Update_Card />} />
+      <Route path="/character/:id" element={<Individual_info />} />
       <Route path="/error" element={<Error />} />
       <Route path="*" element={<Navigate to="/error" />} />
     </Routes>

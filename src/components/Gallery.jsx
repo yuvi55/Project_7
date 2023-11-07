@@ -37,12 +37,6 @@ const Gallery = () => {
         {dbdata.map((item) => (
           <div>
             <Card_view key={item.id} item={item} />
-            <Link
-              to={`/gallery/${item.id}`}
-              className="flex items-center mx-20 my-5"
-            >
-              <button>Edit</button>
-            </Link>
           </div>
         ))}
       </div>
@@ -52,16 +46,21 @@ const Gallery = () => {
 
 const Card_view = ({ item }) => {
   return (
-    <div className="grid grid-cols-3">
-      <div>
-        <img
-          className="w-36 items-center"
-          src="https://shimmering-stardust-c75334.netlify.app/assets/crewmate.ce385016.png"
-          alt={item.name}
-        />
+    <div className="grid grid-cols-2">
+      <div className="border-8 items-center">
+        <Link to={`/character/${item.id}`}>
+          <img
+            src="https://shimmering-stardust-c75334.netlify.app/assets/crewmate.ce385016.png"
+            alt={item.Name}
+          />
+        </Link>
+
         <h2 className="text-3xl">Name of the crewmate: {item.Name}</h2>
         <h2 className="text-2xl">Speed of the crewmate: {item.Speed}</h2>
         <h2 className="text-1xl">Color of the crewmate: {item.Color}</h2>
+        <Link to={`/gallery/${item.id}`} className="items-center my-10">
+          <button>Edit</button>
+        </Link>
       </div>
     </div>
   );
